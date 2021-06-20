@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "d69d848b-4bb3-4e9b-b3f8-f43c57bbfc7f",
+		"name": "O2B",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "createAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNjI0MjE3ODY5LCJzdWIiOiJnc2l2aWRhbCIsImlzcyI6Ik8yQiIsImV4cCI6MTYyNTg0MjA3Nn0.sVB29D1-AJfgR1Rcse9EH2eynhBFTT5FWHr9xhFd5q4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"number\": 105,\r\n    \"city\": \"Pedreira-sp\",\r\n    \"state\": \"SP\",\r\n    \"country\": \"Brasil\",\r\n    \"cep\": \"13920-000\",\r\n    \"streetName\": \"Rua Louis Pasteur\",\r\n    \"neighbourhood\": \"Morumbi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddressById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNjI0MjE3ODY5LCJzdWIiOiJnc2l2aWRhbCIsImlzcyI6Ik8yQiIsImV4cCI6MTYyNTg0MjA3Nn0.sVB29D1-AJfgR1Rcse9EH2eynhBFTT5FWHr9xhFd5q4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/addresses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddressByCep",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNjI0MjE3ODY5LCJzdWIiOiJnc2l2aWRhbCIsImlzcyI6Ik8yQiIsImV4cCI6MTYyNTg0MjA3Nn0.sVB29D1-AJfgR1Rcse9EH2eynhBFTT5FWHr9xhFd5q4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/addresses?cep=13920-000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "cep",
+									"value": "13920-000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNjI0MjE3ODY5LCJzdWIiOiJnc2l2aWRhbCIsImlzcyI6Ik8yQiIsImV4cCI6MTYyNTg0MjA3Nn0.sVB29D1-AJfgR1Rcse9EH2eynhBFTT5FWHr9xhFd5q4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"number\": 1,\r\n    \"city\": \"MODIFIED\",\r\n    \"state\": \"SP\",\r\n    \"country\": \"Brasil\",\r\n    \"cep\": \"13920-000\",\r\n    \"streetName\": \"Rua\",\r\n    \"neighbourhood\": \"Bairro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAddress",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNjI0MjE3ODY5LCJzdWIiOiJnc2l2aWRhbCIsImlzcyI6Ik8yQiIsImV4cCI6MTYyNTg0MjA3Nn0.sVB29D1-AJfgR1Rcse9EH2eynhBFTT5FWHr9xhFd5q4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 99999124,\r\n    \"number\": 1,\r\n    \"city\": \"Pedreira-sp\",\r\n    \"state\": null,\r\n    \"country\": null,\r\n    \"zipcode\": null,\r\n    \"streetName\": null,\r\n    \"neighbourhood\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/addresses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"login\": \"gsividal\",\r\n    \"password\": \"123455\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"number\": 105,\r\n    \"city\": \"Pedreira-sp\",\r\n    \"state\": \"SP\",\r\n    \"country\": \"Brasil\",\r\n    \"zipcode\": \"13920-000\",\r\n    \"streetName\": \"Rua Louis Pasteur\",\r\n    \"neighbourhood\": \"Morumbi\",\r\n    \"latitude\": null,\r\n    \"longitude\": null,\r\n    \"complement\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"login\": \"gsividal\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"login\": \"gsividal\",\r\n    \"password\": \"123789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"gsividal\",\r\n    \"password\": \"123455\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
